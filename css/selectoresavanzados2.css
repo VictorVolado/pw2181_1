@@ -1,0 +1,23 @@
+section:not(#Referencias){
+	color: pink;
+}
+li:nth-child(odd)/*Seleccionar elementos li impares*/
+{
+	color: green;
+}
+li:nth-child(even)/*Seleccionar elementos li pares*/
+{
+	color: blue;
+}
+li:nth-child(5){
+	color: red;
+}
+li:nth-last-child(1){
+	color: purple;
+}
+p:first-line{
+	font-weight: bold;
+}
+article:nth*(1){
+	color: blue;
+}

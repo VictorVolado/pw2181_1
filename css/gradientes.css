@@ -1,0 +1,35 @@
+article{
+border:1px solid green;
+border-radius: 5px;
+height: 50px;
+margin-top: 10px;
+width: 150px;
+}
+#uno{
+	background: red;
+	/* opera*/
+	background: -o-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/* safari*/
+	background: -webkit-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/* mozilla*/
+	background: -moz-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+}
+#dos{
+	background: red;
+	/* opera*/
+	background: -o-linear-gradient(to left,red,yellow);
+	/* safari*/
+	background: -webkit-linear-gradient(to left,red,yellow);
+	/* mozilla*/
+	background: -moz-linear-gradient(to left,red,yellow);
+	background: -moz-linear-gradient(to left,yellow);
+}
+#cuatro{
+	background: red;
+	/* opera*/
+	background: -o-linear-gradient(to right);
+	/* safari*/
+	background: -webkit-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+	/* mozilla*/
+	background: -moz-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1));
+}

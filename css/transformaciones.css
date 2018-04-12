@@ -1,0 +1,64 @@
+article{
+	background: greenyellow;
+	border:2px solid black;
+	margin:20px 5px;
+	padding: 15pX;
+	text-align: center;
+	width: 400px;
+	transition:all 5s linear;
+}
+
+article p{
+	font:30px Tahoma;
+	font-weight: bold;
+	width: 100%;
+}
+/*article:hover{
+	height: 400px;
+	width: 800px;
+}*/
+/* article:hover{
+ 	background: black;
+ 	color: greenyellow;
+ 	transform: translate(150px,300px);
+ 	-o-transform: translate(150px,300px);
+ 	-moz-transform: translate(150px,300px);
+ 	-ms-transform: translate(150px,300px);
+ 	-webkit-transform: translate(150px,300px);
+ }*/
+/* article:hover{
+ 	background: black;
+ 	color: greenyellow;
+ 	transform: rotate(360deg);
+ 	-o-transform: rotate(360deg);
+ 	-moz-transform: rotate(360deg);
+ 	-ms-transform: rotate(360deg);
+ 	-webkit-transform: rotate(360deg);
+ }*/
+  article:hover{
+ 	background: black;
+ 	color: greenyellow;
+ 	transform:scale(1.5);
+ 	-o-transform:scale(1.5); 
+ 	-moz-transform:scale(1.5);
+ 	-ms-transform:scale(1.5);
+ 	-webkit-transform:scale(1.5);
+ }
+/*  article:hover{
+ 	background: black;
+ 	color: greenyellow;
+ 	transform: skew(-10deg,-20deg);
+ 	-o-transform: skew(-10deg,-20deg);
+ 	-moz-transform: skew(-10deg,-20deg);
+ 	-ms-transform: skew(-10deg,-20deg);
+ 	-webkit-transform: skew(-10deg,-20deg);
+ }*/
+   article:hover{
+ 	background: black;
+ 	color: greenyellow;
+ 	transform:translate(150px,150px) skew(-10deg,-20deg);
+ 	-o-transform:translate(150px,150px) skew(-10deg,-20deg);
+ 	-moz-transform:translate(150px,150px) skew(-10deg,-20deg);
+ 	-ms-transform:translate(150px,150px) skew(-10deg,-20deg);
+ 	-webkit-transform:translate(150px,150px) skew(-10deg,-20deg);
+ }
