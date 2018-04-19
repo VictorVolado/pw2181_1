@@ -1,27 +1,142 @@
-body{
-	font-size: 16px;
-	margin:0 auto;
-	min-width: 1078;
-	max-width: 1078;
+body
+{
+	font-size: 16px; /*1em*/
+	margin: 0 auto;
+	min-width: 1078px;
+	max-width: 1078px;
 }
-header input{
+header nav
+{
+	margin-left: 220px;
+	/*No funciona por la mancha de pintura
+	text-align: center;*/
+}
+header input
+{
 	float:right;
+	margin-top: 15px;
 	margin-right: -200px;
-	position: relative;
+	position: relative;/*toma la posicion de la caja y no el de los margenes*/
 }
-header nav ul li{
-	border-bottom: 1px solid gray;
-	color: gray;
+header nav ul li
+{
+	border-bottom:  1px solid #B4B4B5;
+	color: #B4B4B5;
 	display: inline-block;
 	font-size: 1.8em;
 	margin-right: 15px;
-	padding-bottom: 1px;
+	padding-bottom: 2px;
+	/*text-decoration:underline; subrayado de texto*/
 }
-#grantham{
+#bgoffer
+{
+	left: -35px;
+	position: relative;
+	top: -410px;
+}
+#granthams
+{
 	margin-top: 25px;
 	margin-left: 25px;
 }
-#paint{
+#paint
+{
 	float: right;
-
+}
+#primerseccion
+{
+	/*Tamaño de la imagen*/
+	height: 318px;
+	margin-top: 60px;
+}
+#primerseccion article
+{
+	display: inline-block;
+	vertical-align: top;
+}
+#secc01art01
+{
+	margin-left: 30px;
+	width: 60%;
+}
+#secc01art02
+{
+	margin-left: 50px;
+	width: 30%;
+}
+#secc01art02 ul
+{
+	/*Quitamos viñetas (bullets)*/
+	list-style: none;
+}
+#secc01art02 ul li:before
+{
+	/*Volvemos a crear las viñetas (bullets)*/
+	content: "• ";
+	color: #F7C6DC;
+}
+#segundaseccion article
+{
+	padding-right: 122px;
+	text-align: right;
+}
+#terceraseccion article
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 23%; /*100/4articles*/
+}
+#terceraseccion article input[type="email"]
+{
+	border-radius: 5px;
+}
+#terceraseccion article input[type="button"]
+{
+	background: #80af00;
+	border:#80af00;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+}
+#terceraseccion article img
+{
+	/*Alineaión vertical del texto*/
+	vertical-align: middle;
+}
+#secc03art04
+{
+	padding-left: 25px;
+	padding-top: 50px;
+}
+.colorazul
+{
+	color:#6da1d7;
+}
+.colorrosa
+{
+	color:#FF0099;
+}
+.colorverde
+{
+	color:#91c81d;
+}
+.letracomun
+{
+	font-size: 1.2em;
+}
+.letragrande
+{
+	font-size: 3.5em;
+}
+.letramediana
+{
+	font-size: 2em;
+}
+.letrastay
+{
+	font-size: 1.5em;
+}
+.nito
+{
+	font-weight: bold;
 }
