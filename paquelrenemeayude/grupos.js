@@ -1,8 +1,8 @@
-const $ = require('jquery');
-const{BrowserWindow}=require('electron').remote
-const app = require('electron').app
-const path = require('path')
-const url = require('url')
+const $ = require('jquery'),
+{ BrowserWindow } = require('electron').remote,
+app = require('electron').app,
+path = require('path'),
+url = require('url');
 
 function datosGrupos(claveMateria,claveGrupo,nombreMateria){
   this.claveMateria = claveMateria;
@@ -10,7 +10,7 @@ function datosGrupos(claveMateria,claveGrupo,nombreMateria){
   this.nombreMateria = nombreMateria;
 }
 
-var materias;
+var materias = new Array(3);
 
 function inicia(){
   var usuarioValida = require('electron').remote.getGlobal('informacion').token;
@@ -19,29 +19,26 @@ function inicia(){
   var claveMateria="";
   var claveGrupo="";
   var nombreMateria="";
-  var resultado="";
+
 console.log(usuarioValida) //<------------ esto si lo imprime
+console.log(usuario)
+console.log(periodo)
 
   $.ajax({
-    url:'http://itculiacan.edu.mx/dadm/apipaselista/data/obtienegrupos2.php?usuario=' + usuario + '&usuariovalida=' + usuarioValida + '&periodoactual=' + periodo,
-    dataType:'json',
-    seccess: function (data) {
-      console.log(usuarioValida) //<------------ esto si lo imprime
-    if (data.respuesta) {
-      for (var i = 0; i < 3; i++) {
-        materias = new array(3);
+    url:'http://itculiacan.edu.mx/dadm/apipaselista/data/obtienegrupos2.php?usuario='+usuario+'&usuariovalida='+usuarioValida+'&periodoactual='+periodo,
+    dataType: 'json',
+    success: function (data) {
+      console.log(usuarioValida)
+        for (var i = 1; i < data.grupos.length; i++) {
+        var resultado="";
         claveMateria = data.grupos[i].clavemateria;
         claveGrupo = data.grupos[i].grupo;
         nombreMateria = data.grupos[i].materia;
+        materias[i]=new datosGrupos(claveMateria,claveGrupo,nombreMateria);
         resultado = "<li>" + claveMateria[i] + " " + claveGrupo[i] + " " + nombreMateria;
-        $("#lstGrupos").append(resultado);
-        materias[i]=new materias(claveMateria,claveGrupo,nombreMateria);
-        console.log(z), //<---------esto no
-        alert("error")  //<---------esto tampoco
+        $("#lstgrupo").append(resultado);
+
       }
-    }else {
-      alert("error")
-    }
     }
   })
 }
