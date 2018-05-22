@@ -28,14 +28,13 @@ console.log(periodo)
     url:'http://itculiacan.edu.mx/dadm/apipaselista/data/obtienegrupos2.php?usuario='+usuario+'&usuariovalida='+usuarioValida+'&periodoactual='+periodo,
     dataType: 'json',
     success: function (data) {
-      console.log(usuarioValida)
-        for (var i = 1; i < data.grupos.length; i++) {
+        for (var i = 1; i < 4; i++) {
         var resultado="";
         claveMateria = data.grupos[i].clavemateria;
         claveGrupo = data.grupos[i].grupo;
         nombreMateria = data.grupos[i].materia;
+        resultado = "<li>" +" Clave De Materia :"+ claveMateria[i] + "-- Clave Grupo : " + claveGrupo[i] + "--Nombre Materia : " + nombreMateria[i];
         materias[i]=new datosGrupos(claveMateria,claveGrupo,nombreMateria);
-        resultado = "<li>" + claveMateria[i] + " " + claveGrupo[i] + " " + nombreMateria;
         $("#lstgrupo").append(resultado);
 
       }
