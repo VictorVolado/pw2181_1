@@ -1,0 +1,49 @@
+body{
+	font-size:  5em;
+	color: #B40404;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+	
+	max-width: 1024px;
+}
+#btnEntrar{
+	border-style: solid 1px black;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+	margin-left: auto;
+    margin-right: auto;
+    
+    background-color: #b2cecf;
+    display:block;
+    margin: 0 auto;   
+    font-size: 30px; 		
+}
+#boton{
+	margin: 0 auto; 
+	padding-top: 10px;
+}
+
+#encabezado header{
+	text-align:center;
+	
+}
+#formulario {
+	margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+	
+}
+
+#formulario input{
+	display: block;
+	margin: 0 auto;
+	padding-top: 15 px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
