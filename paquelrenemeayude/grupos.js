@@ -33,7 +33,7 @@ console.log(periodo)
         claveMateria = data.grupos[i].clavemateria;
         claveGrupo = data.grupos[i].grupo;
         nombreMateria = data.grupos[i].materia;
-        resultado = "<li>" +" Clave De Materia :"+ claveMateria[i] + "-- Clave Grupo : " + claveGrupo[i] + "--Nombre Materia : " + nombreMateria[i];
+        resultado = "<li>" +" Clave De Materia :"+ claveMateria + "-- Clave Grupo : " + claveGrupo + "--Nombre Materia : " + nombreMateria;
         materias[i]=new datosGrupos(claveMateria,claveGrupo,nombreMateria);
         $("#lstgrupo").append(resultado);
 
