@@ -3,6 +3,7 @@ const $ = require('jquery'),
 app = require('electron').app,
 path = require('path'),
 url = require('url');
+var tabla= document.getElementById("tablaalumnos");
 
 function datosGrupos(claveMateria,claveGrupo,nombreMateria){
   this.claveMateria = claveMateria;
@@ -33,10 +34,14 @@ console.log(periodo)
         claveMateria = data.grupos[i].clavemateria;
         claveGrupo = data.grupos[i].grupo;
         nombreMateria = data.grupos[i].materia;
-        resultado = "<li>" +" Clave De Materia :"+ claveMateria + "-- Clave Grupo : " + claveGrupo + "--Nombre Materia : " + nombreMateria;
+        resultado = " Clave De Materia :"+ claveMateria + "-- Clave Grupo : " + claveGrupo + "--Nombre Materia : " + nombreMateria;
         materias[i]=new datosGrupos(claveMateria,claveGrupo,nombreMateria);
-        $("#lstgrupo").append(resultado);
-
+        
+        var row = tablaalumnos.insertRow(i-1);
+        var cell1 = row.insertCell(i-1);        
+        cell1.innerHTML = resultado;
+        $("#tablaalumnos").append(resultado);
+        
       }
     }
   })

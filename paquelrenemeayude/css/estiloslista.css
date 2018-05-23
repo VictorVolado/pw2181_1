@@ -1,7 +1,14 @@
 body{
 
 }
-#tablaAlumnos{
-	border:1px black;
+
+header{
+	margin:0 auto;
+	font:5em;
+	color: black;
+
+}
+#tablaalumnos{
+	margin-top: 10%;
 
 }
