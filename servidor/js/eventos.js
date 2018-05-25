@@ -13,7 +13,6 @@ var inicioApp =function(){
 			url:"php/validaentrada.php",
 			data: parametros,
 			success: function(response){
-				console.log(response)
 				if(response.respuesta){
 					$("#secInicio").hide("slow");
 					$("#frmUsuarios").show("slow");
@@ -31,7 +30,7 @@ var inicioApp =function(){
 
 	var buscaUsuario = function(){
 		var usuario = $("#txtNombreUsuario").val();
-		var parametros = "opc=buscaUsuario"+"&usuario="+"&aleatorio="+random.Math();
+		var parametros = "opc=buscaUsuario"+"&usuario="+usuario+"&aleatorio="+Math.random();
 		if(usuario != ""){
 			$.ajax({
 			cache:false,
@@ -40,15 +39,16 @@ var inicioApp =function(){
 			url:"php/buscausuario.php",
 			data: parametros,
 			success: function(response){
-				if(response.respuesta){
-					$("txtNombreUsuario").val(response.nombre);
-					$("txtClaveUsuario").val(response.clave);
+				if(response.respuesta == true){
+					$("#txtNombre").val(response.nombre);
+					$("#txtClaveUsuario").val(response.clave);
 				}else{
-					$("txtNombre").focus();
+					$("#txtNombre").focus();
+					$("#txtNombre").val("");
+					$("#txtClaveUsuario").val("");
 				}
 			},
 			error:function(xhr,ajaxOptions,thrownError){
-				console.log(xhr + ajaxOptions + thrown);
 
 			}
 		});
@@ -60,8 +60,36 @@ var inicioApp =function(){
 		if(tecla.which == 13){//enter
 			buscaUsuario();
 		}
+
+	var Guardar = function(){
+		var usuario =$("#txtNombreUsuario").val();
+		var nombre =$("#txtNom").val();
+		var clave =$("#txtClaveUsuario").val();
+		if(usuario!="" && nombre!="" && clave!=""){
+			var usuario = $("#txtNombreUsuario").val();
+		var parametros = "opc=buscaUsuario"+"&usuario="+usuario+"&aleatorio="+Math.random();
+		if(usuario != ""){
+			$.ajax({
+			cache:false,
+			type:"POST",
+			dataType:"json",
+			url:"php/buscausuario.php",
+			data: parametros,
+			success: function(response){
+			
+			},
+			error:function(xhr,ajaxOptions,thrownError){
+
+			}
+		});
+
+		}else{
+			alert("Llene todos los datos")
+		}
+	}
 	}
 	$("#btnAceptar").on("click",Aceptar);
+	$("#btnGuardar").on("click",Guardar)
 	$("#txtNombreUsuario").on("keypress",teclaNombreUsuario);
 	$("#frmUsuarios")
 }
